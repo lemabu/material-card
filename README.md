@@ -1,7 +1,7 @@
 #material-card
 A custom element for simple cards. Built with Polymer, inspired by Material Design.
 
-![Styled example](  "Styled example")
+![Styled example](https://github.com/lemabu/material-card/blob/master/sreenshot.png  "Styled example")
 
 ##Attributes
 * `autoraise`
