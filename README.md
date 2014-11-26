@@ -1,7 +1,7 @@
 #material-card
 A custom element for simple cards. Built with Polymer, inspired by Material Design.
 
-![Styled example](https://github.com/lemabu/material-card/blob/master/sreenshot.png  "Styled example")
+![Styled example](https://github.com/lemabu/material-card/blob/master/screenshot.png  "Styled example")
 ![Real world example of material-card in a project](https://github.com/lemabu/material-card/blob/master/sreenshot2.png  "Real world example of material-card in a project")
 
 ##Attributes
