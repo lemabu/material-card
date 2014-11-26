@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>material-card Demo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <script src="../webcomponentsjs/webcomponents.js"></script>  
+  
+  <link rel="import" href="./material-card.html">
+  
+  <link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+  
+  <style>
+    .fancyCard {
+        width: 250px;
+    }
+    .fancyCard::shadow .content {
+        background-color: #03A9F4;
+        color: #FFF;
+        padding: 10px;
+    }
+    .fancyCard::shadow  h2 {
+        font-family: 'Playfair Display SC', serif;
+        font-weight: 200;
+    }
+  </style>
+</head>
+
+<body unresolved>
+
+<section>
+    <h2>Default card with some content</h2>
+    <material-card>
+        <h2>Hello World</h2>
+        <p>This is a material-card custom element<p>
+        <p>By default, autoraise=false</p>
+    </material-card>
+</section>
+
+<section>
+    <h2>Card with autoraise=true</h2>
+    <material-card autoraise=true>
+        <h2>Hello autoraise</h2>
+        <p>This card will automatically raise to "meet" the mouse cursor on hover<p>
+        <p>It will fall back into place on mouseout<p>
+    </material-card>
+</section>
+
+
+<section>
+    <h2>A styled card with autoraise=true</h2>
+    
+    <pre>
+            .fancyCard {
+                width: 250px;
+            }
+            .fancyCard::shadow .content {
+                background-color: #03A9F4;
+                color: #FFF;
+                padding: 10px;
+            }
+            .fancyCard::shadow  h2 {
+                font-family: 'Playfair Display SC', serif;
+                font-weight: 200;
+            }
+    </pre>
+    
+    <material-card class="fancyCard" autoraise=true>
+    <div vertical layout center center-justified>
+        <h2>Hello fancy card</h2>
+        <p>Something witty</p>
+    </div>
+    </material-card>
+</section>
+
+</body>
+</html>

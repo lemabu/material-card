@@ -1,0 +1,52 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<link rel="import" href="../paper-shadow/paper-shadow.html">
+<link rel="import" href="../paper-ripple/paper-ripple.html">
+
+<polymer-element name="material-card" attributes="autoraise" on-mouseover="{{mouseFocus}}" on-mouseout="{{mouseFocus}}">
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding: 20px;
+      }
+
+    </style>
+
+    <paper-shadow id="shadow" animated=true>
+    <paper-ripple></paper-ripple>
+        <div class="content">
+            <content></content>
+        </content>
+    </paper-shadow>
+  </template>
+
+  <script>
+    Polymer("material-card",{
+      z_mouseout: 1,
+      z_mouseover: 5,
+
+      handleDetailsTap: function(){
+        console.log("Details Tapped");
+        this.selecedHero=this.myHero;
+      },
+
+      mouseFocus: function(a,b,c){
+        /* Called for on-mouseover as well as on-mouseout - switch on event.type to raise or lower
+           card
+        */
+        if(this.autoraise==="true") {
+          switch (a.type) {
+            case 'mouseover':
+              this.$.shadow.setZ(this.z_mouseover);
+              break;
+            case 'mouseout':
+              this.$.shadow.setZ(this.z_mouseout);
+              break;
+          }
+        }
+      }
+    });
+  </script>
+</polymer-element>
+
