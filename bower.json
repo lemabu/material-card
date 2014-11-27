@@ -9,8 +9,8 @@
   "keywords": [
     "material",
     "card",
-    "custom",
-    "element",
+    "custom-element",
+    "web-components",
     "polymer"
   ],
   "license": "MIT",
